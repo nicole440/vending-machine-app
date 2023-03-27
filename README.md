@@ -1,3 +1,5 @@
+![vending machine](https://unsplash.com/photos/ifbVa1gYDnA)
+
 ## Module 1 Capstone - Vending Machine Software
 
 You're developing an application for the newest vending machine distributor,
