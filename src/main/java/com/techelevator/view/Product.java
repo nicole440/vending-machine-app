@@ -1,10 +1,6 @@
 package com.techelevator.view;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
 
 public abstract class Product {
     TransactionLog logWriter = new TransactionLog();
@@ -45,12 +41,6 @@ public abstract class Product {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
-
-    public void purchaseItem(){
-        if (this.quantity > 0) {
-            this.quantity -= 1;
-        }
     }
 
     public void dispenseItem(Product product) {

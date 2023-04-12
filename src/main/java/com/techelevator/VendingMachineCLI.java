@@ -4,10 +4,7 @@ import com.techelevator.view.*;
 
 import java.io.*;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
-
 
 public class VendingMachineCLI {
 
@@ -47,7 +44,6 @@ public class VendingMachineCLI {
         while (running) {
             String choice = (String) menu.getChoiceFromOptions(MAIN_MENU_OPTIONS);
 
-            // A switch statement could also be used here.  Your choice.
             switch (choice) {
                 case MAIN_MENU_OPTION_DISPLAY_ITEMS:
                     displayItems();
@@ -146,7 +142,7 @@ public class VendingMachineCLI {
                 } else if (purchaseMenuOption.equals(PURCHASE_MENU_OPTION_FINISH_TRANSACTION)) {
                     String change = ReturnChange.returnChange(currentTransaction.getBalance());
                     System.out.println("Your change is: " + change);
-                    String changeLog = "GIVE CHANGE: " +  "$" + currentTransaction.getBalance() + " $0.00"; // ¯\_(ツ)_/¯
+                    String changeLog = "GIVE CHANGE: " +  "$" + currentTransaction.getBalance() + " $0.00"; // ¯\_(ツ)_/¯ // TODO fix this magic number
                     currentTransaction.subtractMoney(currentTransaction.getBalance());
                     logWriter.log(changeLog);
                 }

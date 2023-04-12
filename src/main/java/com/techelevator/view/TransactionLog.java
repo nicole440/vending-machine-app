@@ -6,8 +6,6 @@ import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
 
 public class TransactionLog {
     File log = new File("C:\\Users\\Student\\workspace\\module-1-capstone-team-6\\src\\main\\resources\\Log.txt");
